@@ -6,6 +6,11 @@ import enums.WeaponType;
 import java.util.List;
 
 public class Mage extends Hero{
+    // instance field which is a constant list of valid weapon types for a mage.
+    // the list is created using the List.of() method which returns a list with the elements specified.
+    private static final List<WeaponType> mageValidWeaponTypes = List.of(WeaponType.STAFFS, WeaponType.WANDS);
+    private static final List<ArmorType> mageValidArmorTypes = List.of(ArmorType.CLOTH);
+
     public Mage(String name, int level, HeroAttribute levelAttributes, List<WeaponType> validWeaponTypes, List<ArmorType> validArmorTypes) {
         super(name, level, levelAttributes, validWeaponTypes, validArmorTypes);
     }
