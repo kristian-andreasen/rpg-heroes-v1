@@ -3,6 +3,7 @@
 ### Description
 
 ### Tasks
+- [ ] create a branch protecting rule that ensures that collaborators can't push directly to the master branch without submitting a PR first.
 - [ ] create a Github Action that will help ensure that the code in pull requests passes all tests before being merged into the master branch.
 - [ ] create UML class diagram
 
