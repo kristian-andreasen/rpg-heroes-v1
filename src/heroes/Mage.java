@@ -11,8 +11,8 @@ public class Mage extends Hero{
     private static final List<WeaponType> mageValidWeaponTypes = List.of(WeaponType.STAFFS, WeaponType.WANDS);
     private static final List<ArmorType> mageValidArmorTypes = List.of(ArmorType.CLOTH);
 
-    public Mage(String name, int level, HeroAttribute levelAttributes, List<WeaponType> validWeaponTypes, List<ArmorType> validArmorTypes) {
-        super(name, level, levelAttributes, validWeaponTypes, validArmorTypes);
+    public Mage(String name) {
+        super(name, 1, new HeroAttribute(1, 1, 8), mageValidWeaponTypes, mageValidArmorTypes);
     }
 
     @Override
