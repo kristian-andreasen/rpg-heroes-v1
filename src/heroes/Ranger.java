@@ -1,8 +1,13 @@
 package heroes;
 
+import enums.ArmorType;
+import enums.WeaponType;
+
+import java.util.List;
+
 public class Ranger extends Hero{
-    public Ranger(String name, int level, HeroAttribute levelAttributes) {
-        super(name, level, levelAttributes);
+    public Ranger(String name, int level, HeroAttribute levelAttributes, List<WeaponType> validWeaponTypes, List<ArmorType> validArmorTypes) {
+        super(name, level, levelAttributes, validWeaponTypes, validArmorTypes);
     }
 
     @Override

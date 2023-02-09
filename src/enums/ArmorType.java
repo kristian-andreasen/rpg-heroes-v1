@@ -1,2 +1,5 @@
-package enums;public class ArmorType {
+package enums;
+
+public enum ArmorType {
+    CLOTH, LEATHER, MAIL, PLATE
 }

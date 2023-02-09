@@ -1,7 +1,10 @@
+package items;
+
 import enums.Slot;
 import enums.WeaponType;
+import items.Item;
 
-public class Weapon extends Item{
+public class Weapon extends Item {
     public WeaponType weaponType;
     public int weaponDamage;
 

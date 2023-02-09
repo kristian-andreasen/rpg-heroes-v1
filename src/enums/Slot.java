@@ -1,2 +1,5 @@
-package enums;public class Slot {
+package enums;
+
+public enum Slot {
+    HEAD, BODY, LEGS, WEAPON
 }

@@ -1,8 +1,11 @@
+package items;
+
 import enums.ArmorType;
 import enums.Slot;
 import heroes.HeroAttribute;
+import items.Item;
 
-public class Armor extends Item{
+public class Armor extends Item {
     private ArmorType armorType;
     private HeroAttribute armorAttributes;
 
