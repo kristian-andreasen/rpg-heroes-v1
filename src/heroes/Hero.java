@@ -1,13 +1,13 @@
 package heroes;
 
 import enums.*;
-import exceptions.InvalidWeaponException;
+import exceptions.InvalidItemException;
 
 import java.util.List;
 import java.util.Map;
 import java.util.HashMap;
 
-import items.Item;
+import items.*;
 
 /**
  * The Hero class is an abstract class that represents a hero in a game.
@@ -15,7 +15,7 @@ import items.Item;
  * It also has a levelUp method that increases the hero's level and updates the hero's attributes.
  */
 
-abstract class Hero {
+public abstract class Hero {
     public String name;
     public int level;
     public HeroAttribute levelAttributes;
@@ -59,10 +59,25 @@ abstract class Hero {
         levelAttributes.increaseAttributes(this);
     }
 
-        public void equipWeapon(){
+    public void equipWeapon(Weapon weapon) throws InvalidItemException{
+        // Check if the weapon's type is in the list of valid weapon types for the hero
+        if(!validWeaponTypes.contains(weapon.getWeaponType())){
+            throw new InvalidItemException("This hero cannot equip this type of weapon");
+        }
+        // Get the weapon slot
+        Slot slot = weapon.getSlot();
+        // Check if the slot is not filled
+        if (equipment.get(slot) == null) {
+            // If the slot is not filled, put the weapon in the equipment map with the slot as the key and the weapon as the value
+            equipment.put(slot, weapon);
+        }
     }
 
-    public void equipArmor(){
+    public void equipArmor(Armor armor) throws InvalidItemException{
+        if(!validArmorTypes.contains(armor.getArmorType())){
+            throw new InvalidItemException("This hero cannot equip this type of armor");
+        }
+        equipment.put(armor.getSlot(), armor);
     }
 
 
